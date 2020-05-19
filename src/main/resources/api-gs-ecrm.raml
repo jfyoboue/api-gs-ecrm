@@ -1,0 +1,77 @@
+#%RAML 0.8
+title: API GS ECRM
+
+/users:
+    displayName: Utilisateurs
+    
+    post:
+        description: Créerr un utilisateur
+        responses:
+            200:
+                body:
+                    application/json:
+                
+    
+    
+
+/profiles:
+    displayName: Profils
+    
+    post:
+        description: Créer un profil
+        responses:
+            200:
+                body:
+                    application/json:
+
+/customers:
+    displayName: Clients
+    
+    get:
+        description: Récupérer tous les clients
+        responses:
+            200:
+                body:
+                    application/json:
+        
+    /{id}:
+        displayName: Client
+        
+        /contacts:
+            displayName: Contacts
+            
+            post:
+                description: Créer un contact
+                
+                responses:
+                    200:
+                        body:
+                            text/xml:
+                            application/xml:
+                            application/json:
+        
+        /contracts:
+            displayName: Contrats
+            post:
+                description: Créer un contrat
+                
+                responses:
+                    200:
+                        body:
+                            text/xml:
+                            application/xml:
+                            application/json:
+             
+
+/produits:
+    displayName: Produits
+    
+    post:
+        description: Créer un produit
+        responses:
+            200:
+                body:
+                    text/xml:
+                    application/xml:
+                    application/json:
+    
